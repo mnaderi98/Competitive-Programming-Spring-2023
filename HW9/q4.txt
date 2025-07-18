@@ -1,0 +1,23 @@
+
+we have n cities in country or we have n node in free graph. we have some query that give us ai, bi. that means in country shoud be a way from ai to bi, but There is no need for these two cities to be directly adjacent to each other.
+and just ai to bi there is no need for bi to ai. we want know coressponding to quereies minimum edges that is nessery for this goal.
+in other word in our graph we should have a path from ai to bi and we can not have edge from ai to bi.
+the complexity of this problem is that we can optimize number of edges. for exeample wen we have this graph in input:
+4 5
+1 2
+1 3
+1 4
+2 3
+2 4
+ number of nodes are : 4
+ number of queries is = 5
+	when we put edge from 1 to 2
+	and		from 2 to 3
+	and 		from 2 to 4
+	all queries are possible and tests pass. we can also put an edge from 1 to 4 directly but it is not optimum and tests fales.
+	without an aedge from 1 to 4, we can go from 1 to 2, and from 2 to 4 and it is true.
+input:
+	n m : n = number of cities , m = number of queries
+	m line : 
+		ai bi
+output: minimum edges we need.
